@@ -9,17 +9,22 @@ screen.tracer(0)
 
 snake = []
 
-for turtles in range(3):
-    new_turtle = Turtle("square")
-    new_turtle.color("DeepPink")
-    new_turtle.pu()
-    new_turtle.goto((-20 * turtles), 0)
-    snake.append(new_turtle)
+starting_positions = [(0, 0), (-20, 0), (-40, 0)]
+
+for position in starting_positions:
+    new_segment = Turtle("square")
+    new_segment.color("DeepPink")
+    new_segment.pu()
+    new_segment.goto(position)
+    snake.append(new_segment)
+
+
 
 game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
+
     for seg in range(len(snake) - 1, 0, -1):
         new_x = snake[seg - 1].xcor()
         new_y = snake[seg-1].ycor()
