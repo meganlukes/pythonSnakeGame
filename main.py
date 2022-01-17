@@ -30,6 +30,7 @@ while game_is_on:
     if snake.snake[0].distance(food) < 15:
         print("yummy")
         food.refresh()
+        snake.extend()
         scoreboard.increase_score()
 
     if snake.snake[0].xcor() > 280 or snake.snake[0].xcor() < -280 or snake.snake[0].ycor() > 280 or snake.snake[0].ycor() < -280:
