@@ -14,8 +14,7 @@ snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
 
-# with open("high_scores.txt", mode="a") as file:
-#     file.write("\n new ")
+
 
 screen.listen()
 screen.onkey(snake.up, "Up")
