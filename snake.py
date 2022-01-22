@@ -31,6 +31,8 @@ class Snake:
         self.snake[0].forward(move_distance)
 
     def reset(self):
+        for seg in self.snake:
+            seg.goto(1000, 1000)
         self.snake.clear()
         self.create_snake()
 
