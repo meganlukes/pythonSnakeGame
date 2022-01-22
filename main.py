@@ -14,6 +14,9 @@ snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
 
+with open("high_scores.txt") as file:
+    scores = file.read()
+    print(scores)
 
 screen.listen()
 screen.onkey(snake.up, "Up")
